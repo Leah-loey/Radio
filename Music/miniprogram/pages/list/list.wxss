@@ -1,0 +1,398 @@
+/* pages/list/list.wxss */
+page {
+    background: #f6f6f6;
+    padding-bottom:120rpx;
+}
+text{
+    letter-spacing:3rpx;
+}
+
+.banner {
+    width: 100%;
+    height: 400rpx;
+    position: relative;
+    /* z-index: 0; */
+    overflow: hidden;
+    background-color: rgba(196, 196, 196, 0.767);
+    display: flex;
+    margin-bottom: 20rpx;
+
+}
+
+/* .banner::after {
+    content: '';
+    position: absolute;
+    width: 140%;
+    height: 400rpx;
+    left: -20%;
+    top: 0;
+    z-index: -1;
+    border-radius: 0 0 30% 30%;
+    background-color: rgba(0, 0, 0, 0.178);
+    overflow: hidden;
+} */
+
+.banner .banner_img {
+    width: 100%;
+    height: 180%;
+    z-index: -1;
+    position: absolute;
+
+
+}
+
+.list_message {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    /* background-color: rgba(136, 9, 255, 0.397); */
+
+}
+
+.list_img {
+    width: 230rpx;
+    height: 230rpx;
+    border-radius: 20rpx;
+    /* float: left; */
+    margin: 40rpx;
+    box-shadow: 0rpx 2rpx 1rpx #f1f1f1;
+}
+
+.list_int {
+    width: 400rpx;
+    height: 230rpx;
+    /* background-color: rgba(165, 42, 42, 0.63); */
+    /* margin-left: 10rpx; */
+    padding: 10rpx;
+}
+
+.list_name {
+    /* width: 100%; */
+    height: 40%;
+    /* background-color: coral; */
+    color: white;
+}
+
+.author {
+    height: 30%;
+    /* background-color: yellow; */
+    /* margin-top: 6rpx; */
+    display: flex;
+    align-items: center;
+}
+
+.author_img {
+    width: 55rpx;
+    height: 55rpx;
+    /* background-color: darksalmon; */
+    margin: 0 6rpx;
+    border-radius: 70rpx;
+    overflow: hidden;
+}
+
+.author_img image {
+    width: 100%;
+    height: 100%;
+}
+
+.author_name {
+    font-weight: 550;
+    color: white;
+    margin-left: 10rpx;
+    font-size: 26rpx;
+}
+
+.introduction {
+    width: 100%;
+    height: 20%;
+    /* background-color: teal; */
+    margin-top: 20rpx;
+    text-align: center;
+    display: flex;
+}
+
+
+.introduction text {
+    width: 92%;
+    /* background-color:salmon; */
+    color: white;
+    font-size: 28rpx;
+    align-items: center;
+    overflow: hidden;
+    /* 文本不换行 */
+    white-space: nowrap;
+    /* 文本溢出部分省略 */
+    text-overflow: ellipsis;
+
+}
+
+.more-btn {
+    width: 36rpx;
+    height: 36rpx;
+    /* background-color: rgb(255, 255, 255); */
+    margin: 0;
+    position: relative;
+    float: right;
+    padding: 0;
+
+
+}
+
+.more-btn image {
+    width: 36rpx;
+    height: 36rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding-top: 6rpx;
+}
+
+.other {
+    width: 80%;
+    height: 20%;
+    /* background-color: violet; */
+    margin: 320rpx auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.love {
+    width: 150rpx;
+    height: 60rpx;
+    overflow: hidden;
+    /* background-color: wheat; */
+    display: flex;
+    align-items: center;
+
+}
+
+.love image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.love text {
+    margin-left: 10rpx;
+    color: white;
+}
+
+.share {
+    width: 150rpx;
+    height: 60rpx;
+    overflow: hidden;
+    /* background-color: wheat; */
+    display: flex;
+    align-items: center;
+
+}
+
+.share image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.share text {
+    margin-left: 10rpx;
+    color: white;
+}
+
+.music_list {
+    width: 100%;
+    height: 150rpx;
+    /* background-color: rgb(218, 218, 218); */
+    /* margin-top: 20rpx; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 1px 10px -3px #4b4b4b31;
+}
+
+.music_list .music_list_l {
+    width: 130rpx;
+    height: 130rpx;
+    /* background-color: slateblue; */
+    border-radius: 20rpx;
+    overflow: hidden;
+
+}
+
+.music_list .music_list_l image {
+    width: 100%;
+    height: 100%;
+}
+
+.music_list .music_list_c {
+    width: 480rpx;
+    height: 130rpx;
+    /* background-color: slateblue; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    
+}
+
+.music_list .music_list_c .music_name {
+    color: #333333;
+    /* background-color: aqua; */
+}
+
+.music_more {
+    width: 100%;
+    height: 48rpx;
+    /* background-color: yellowgreen; */
+    display: flex;
+
+}
+
+.music_more text {
+    color: #666666;
+    font-size: 26rpx;
+    margin: auto 0;
+}
+
+.playback {
+    width: 200rpx;
+    /* background-color: rgb(0, 0, 255); */
+    margin-left: 30rpx;
+    display: flex;
+    align-items: center;
+}
+
+.playback image {
+    width: 35rpx;
+    height: 35rpx;
+}
+
+.playback text {
+    color: #666666;
+    font-size: 26rpx;
+    margin-left: 4rpx;
+}
+
+.music_list .music_list_r {
+    width: 50rpx;
+    height: 130rpx;
+    /* background-color: rgba(255, 255, 255, 0.527); */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.music_list .music_list_r image {
+    width: 50rpx;
+    height: 50rpx;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    width: 100%;
+    height: 120rpx;
+    background-color: rgba(255, 255, 255, 0.932);
+    position: fixed;
+    bottom: 0rpx;
+
+}
+
+.playmusic {
+    width: 100%;
+    height: 90%;
+    /* background-color: royalblue; */
+    overflow: hidden;
+    margin: 6rpx auto;
+    float: left;
+    position: relative;
+}
+
+.musicimg {
+    width: 108rpx;
+    height: 108rpx;
+    float: left;
+    /* text-align: start; */
+    margin-left: 25rpx;
+    border-radius: 20rpx;
+
+
+}
+
+.musicmas {
+    width: 50%;
+    height: 108rpx;
+    float: left;
+    /* background-color: saddlebrown; */
+
+    overflow: hidden;
+    text-align: center;
+    margin-left: 10rpx;
+    /* padding:10rpx; */
+    /* 文本不换行 */
+    white-space: nowrap;
+    /* 文本溢出部分省略 */
+    text-overflow: ellipsis;
+
+}
+
+.musicmas text {
+    /* background-color: rgb(31, 129, 52); */
+    font-size: 28rpx;
+    line-height: 108rpx;
+    display: block;
+
+}
+
+.play {
+    width: 66rpx;
+    height: 66rpx;
+    float: left;
+    /* text-align: start; */
+    margin: 21rpx 8rpx 21rpx 37rpx;
+    /* border-radius: 20rpx; */
+    /* background-color: blueviolet; */
+    /* position: absolute; */
+
+
+}
+
+.pause {
+    width: 66rpx;
+    height: 66rpx;
+    float: left;
+    /* text-align: start; */
+    margin: 21rpx 8rpx 21rpx 37rpx;
+    /* border-radius: 20rpx; */
+    /* background-color: blueviolet; */
+    /* position: absolute; */
+
+}
+
+.playlist {
+    width: 66rpx;
+    height: 66rpx;
+    float: left;
+    /* background-color: darksalmon; */
+    margin: 21rpx;
+    /* position: absolute; */
+    /* text-align: start; */
+    /* margin-left: 25rpx; */
+    /* border-radius: 20rpx; */
+}

@@ -1,0 +1,91 @@
+<!--pages/list/list.wxml-->
+<view class="banner">
+  <image class="banner_img" src="{{radioimg}}"></image> 
+  <view class="list_message">
+    <image class="list_img" src="{{radioimg}}"></image>
+    <view class="list_int">
+      <view class="list_name">{{radioname}}</view>
+      <view class="author">
+        <view class="author_img">
+          <image src="https://p1.music.126.net/dGiz4-481JoZSleRLNNCdA==/109951166291130146.jpg?param=200y200">
+          </image>
+        </view>
+        <view class="author_name">永濑廉</view>
+      </view>
+      <view class="introduction">
+        <text>SexyZone音频电台;SexyZone音频电台;SexyZone音频电台;</text>
+        <button class="more-btn">
+          <image class="more-img" src="/images/icon/more.png"></image>
+        </button>
+      </view>
+    </view>
+  </view>
+  <view class="other">
+    <view class="love">
+      <image src="/images/icon/love.png"></image>
+      <text>2000</text>
+    </view>
+    <view class="share">
+      <image src="/images/icon/share.png"></image>
+      <text>1003</text>
+    </view>
+  </view>
+</view>
+
+<!-- <view class="music_list">
+  <block wx:for="{{musicbox}}" wx:key="*this">
+    <view class="box">
+      <view class="list-img">
+        <image src="{{item.src}}"></image>
+      </view>
+      <view class="list-name">
+        <view class="song-name">{{item.songname}}</view>
+      </view>
+    </view>
+  </block>
+</view> --> 
+<block wx:for="{{music}}"  wx:key="*this" wx:for-index="index">
+  <view class="music_list" bindtap="play" data-item="{{item}}" data-index="{{index}}"> 
+    <view class="music_list_l">
+      <image src="{{item.src}}" />
+    </view>
+    <view class="music_list_c">
+      <view class="music_message">
+        <text class="music_name">{{item.music_name}}</text>
+        <view class="music_more">
+          <text class="music_tiem">{{item.music_tiem}}</text>
+          <view class="playback">
+            <image src="/images/icon/play.png"></image>
+            <text>{{item.play}}</text>
+          </view>
+        </view>
+ 
+      </view>
+    </view>
+    <view class="music_list_r">
+      <image src="/images/icon/more1.png" />
+    </view>
+  </view>
+
+</block>
+
+
+
+
+
+
+
+
+
+<view class="footer">
+  <view class="playmusic"  >
+    <image class="musicimg" bindtap="play" src="https://p2.music.126.net/bzLAnc37CWXa-h-G6X5txg==/109951165779781352.jpg?param=140y140"></image>
+    <view class="musicmas" bindtap="play">
+      <text>{{text}}</text>
+    </view>
+
+    <image class="play" src="/images/icon/icon-play.png" hidden="{{isPlay}}" bindtap="handlePlay" />
+    <image class="pause" src="/images/icon/icon-pause.png" hidden="{{!isPlay}}" bindtap="handlePause"/>
+    <image class="playlist" src="/images/icon/playlist.png" />
+  </view>
+</view>

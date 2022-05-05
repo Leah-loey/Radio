@@ -1,0 +1,85 @@
+<!--pages/play/play.wxml-->
+<!-- <view class="background"> -->
+<image class="background-img" src="{{img}}" />
+
+<view class="play_box">
+    <view class="name">
+        <view class="music_name">{{name}}</view>
+        <view class="author_name">{{author_name}}</view>
+    </view>
+    <view class="music_img">
+        <image src="{{img}}" />
+    </view>
+    <view class="operation">
+        <image class="good" src="/images/icon/good.png"></image>
+        <image class="download" src="/images/icon/download.png"></image>
+        <image class="comment" src="/images/icon/comment.png"></image>
+        <image class="more" src="/images/icon/more1.png"></image>
+    </view>
+    <view class="progress">
+        <text class="play_time">{{playtime}}</text>
+        <slider block-size="12" activeColor="#666666" max="{{max}}" value="{{move}}" bindchange="sliderchange"></slider>
+        <text class="end_time">{{totaltime}}</text>
+    </view>
+    <view class="play_pause">
+        <image bindtap="changemode" class="play_mode" src="/images/icon/{{mode=='loop'?'play_mode':'play_mode(one)'}}.png" />
+        <image class="up" bindtap="lostsong" src="/images/icon/up.png" />
+        <view class="change" bindtap="playdate">
+            <image class="pause" src="/images/icon/{{date=='play'?'icon-play.png':'icon-pause.png'}}"/>
+        </view>
+        <image class="next" bindtap="nextSong" src="/images/icon/next.png" data-num="number"/>
+        <image class="playlist" src="/images/icon/playlist.png" />
+    </view>
+</view>
+ 
+<view class="detailed">
+    <text class="detailed_text">详细</text>
+    <view class="from">
+        <text>来自</text>
+        <view class="from_box">
+            <view class="from_l">
+                <image src="{{aimg}}" />
+            </view>
+            <view class="from_c">
+                <view class="list_message">
+                    <text class="list_name">{{list_name}}</text>
+                    <view class="list_more">
+                        <text>{{collection}}收藏 | {{update_time}}更新</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="author">
+        <view class="author_box">
+            <view class="author_l">
+                <image src="{{author_img}}" />
+            </view>
+            <view class="author_c">
+                <view class="list_message">
+                    <text class="list_name">{{author_name}}</text>
+                    <view class="list_more">
+                        <text>244人关注</text>
+                    </view>
+                </view>
+            </view>
+            <view class="author_r">
+                <text>+ 关注</text>
+            </view>
+        </view>
+    </view>
+    <view class="introduce">
+        <view class="message">
+            <text class="type">{{type}}</text>
+            <text class="int_name">{{name}}</text>
+        </view>
+        <text class="int_time">发布时间:{{release_time}} 播放量:{{listen}}</text>
+        <view class="int_message">
+            <text class="int_text">{{introduce}}</text>
+        </view>
+
+    </view>
+</view>
+
+
+<audio action="{{action}}" bindended="changeMusic" bindtimeupdate="timechange" src="http://music.163.com/song/media/outer/url?id={{musicid}}.mp3"></audio>

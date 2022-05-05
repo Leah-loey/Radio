@@ -1,0 +1,36 @@
+{
+  "pages": [
+    
+    "pages/radio/radio",
+    "pages/find/find",
+    "pages/list/list",
+    "pages/play/play",
+    "pages/my/my"
+    
+    
+
+
+  ],
+  
+  "window": {
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FD726D",
+    "navigationBarTitleText": "LOEY PARK",
+    "navigationBarTextStyle": "black"
+  },
+
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "functionalPages":{  
+    "independent": true
+  },
+  "debug": true,
+  "requiredBackgroundModes": ["audio", "location"],
+
+  "sitemapLocation": "sitemap.json"
+}
+

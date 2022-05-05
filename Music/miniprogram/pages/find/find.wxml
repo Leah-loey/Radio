@@ -1,0 +1,40 @@
+<!--pages/find/find.wxml-->
+<view class="find">
+  <input bindinput="keychange" type="text" placeholder="snowman" class="text"></input>
+  <view class="find-btn" bindtap="search">
+    <image class="find-img" src="/images/icon/find.png"></image>
+  </view>
+</view>
+
+<!-- <view class="historybox" style="display: none;">
+  <text class="history">搜索记录</text>
+  <view class="clean">
+    <image src="/images/icon/clean.png" bindtap="find"></image>
+  </view>
+</view> -->
+
+
+<view></view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <view class="hotContainer">
+  <text class="title">热搜榜</text>
+  <view class="hotList">
+    <view class="hotItem" wx:for="{{hotlist}}" wx:key="*this">
+      <text class="order">1</text>
+      <text class="name">{{item.searchword}}</text>
+    </view>
+  </view> 
+</view> -->

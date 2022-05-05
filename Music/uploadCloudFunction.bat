@@ -1,0 +1,1 @@
+"D:\download\微信小程序\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-2g0xg91l6b3fc8c3 --n quickstartFunctions --r --project "D:\Student\wxxcx\Music" --report_first --report

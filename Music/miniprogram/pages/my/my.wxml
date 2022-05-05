@@ -1,0 +1,19 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <view class="banner">
+    <image src="/images/banner1.jpg"></image>
+  </view>
+  <view class="box">
+    <view class="block">
+      <view class="title">公司总部</view>
+      <view class="same">地址：{{address}}</view>
+      <view class="same">邮编：{{postal}}</view>
+    </view>
+    <view class="block">
+      <view class="title">客服服务</view>
+      <view class="same">客服热线：{{hotline}}</view>
+      <view class="same">周一至周日：{{workday}}</view>
+      <view class="same">邮箱：{{email}}</view>
+    </view>
+  </view>
+</view>

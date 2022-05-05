@@ -1,0 +1,103 @@
+<!--pages/radio/radio.wxml-->
+
+<swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#d81e06" indicator-dots interval="2000" duration="1000" previous-margin="70rpx" next-margin="70rpx" circular bindchange="bindchange" style='height: 300rpx'>
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item.url}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+      </image>
+      <!-- <view class="text">{{item.text}}</view> -->
+    </swiper-item>
+
+  </block>
+</swiper>
+<view class="find"> 
+  <input bindinput="keychange" type="text" placeholder="snowman" class="text"></input>
+  <view class="find-btn" bindtap="search">
+    <image class="find-img" src="/images/icon/find.png"></image>
+  </view>
+</view>
+<view class="recommend">
+  <text>电台推荐</text>
+  <view class="more"> 
+    <text>更多</text>
+    <button class="more-btn">
+      <image class="more-img" src="/images/icon/more.png"></image>
+    </button>
+  </view>
+
+</view>
+<view class="list">
+  <block wx:for="{{musicbox}}" wx:key="*this">
+    <view class="box" bindtap="list" data-item="{{item}}"> 
+      <view class="list-img">
+        <image src="{{item.src}}"></image>
+      </view>
+      <view class="list-name">
+        <view class="song-name">{{item.songname}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="recommend">
+  <text>创意翻唱</text>
+  <view class="more">
+    <text>更多</text>
+    <button class="more-btn">
+      <image class="more-img" src="/images/icon/more.png"></image>
+    </button>
+  </view>
+ 
+</view>
+<view class="list">
+  <block wx:for="{{musicbox1}}" wx:key="*this">
+    <view class="box">
+      <view class="list-img">
+        <image src="{{item.src}}"></image>
+      </view>
+      <view class="list-name">
+        <view class="song-name">{{item.songname}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+
+
+<view class="recommend">
+  <text>明星专区</text>
+  <view class="more">
+    <text>更多</text>
+    <button class="more-btn">
+      <image class="more-img" src="/images/icon/more.png"></image>
+    </button>
+  </view>
+
+</view>
+<view class="list">
+  <block wx:for="{{musicbox2}}" wx:key="*this">
+    <view class="box">
+      <view class="list-img">
+        <image src="{{item.src}}"></image>
+      </view>
+      <view class="list-name">
+        <view class="song-name">{{item.songname}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+
+
+
+
+
+<view class="footer">
+  <view class="playmusic">
+    <image bindtap="play" class="musicimg" src="https://p2.music.126.net/bzLAnc37CWXa-h-G6X5txg==/109951165779781352.jpg?param=140y140"></image>
+    <view class="musicmas">
+      <text>{{text}}</text>
+    </view>
+    <image class="play" src="/images/icon/icon-play.png" hidden="{{isPlay}}" bindtap="handlePlay" />
+    <image class="pause" src="/images/icon/icon-pause.png" hidden="{{!isPlay}}" bindtap="handlePause" />
+    <image class="playlist" src="/images/icon/playlist.png" />
+  </view>
+</view>

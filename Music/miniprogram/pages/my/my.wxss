@@ -1,0 +1,47 @@
+/* pages/my/my.wxss */
+page {
+    background: rgb(87, 86, 86);
+  }
+  
+  .banner {
+    width: 100%;
+  }
+  
+  image {
+    display: block;
+    width: 100%;
+    height: 400rpx;
+    margin-bottom: 20rpx;
+  }
+  
+  .box {
+    background: rgb(87, 86, 86);
+    padding: 40rpx 20rpx;
+  }
+  
+  .block {
+    margin-bottom: 40rpx;
+  }
+  
+  .title {
+    color: #ccc;
+    margin-bottom: 20rpx;
+  }
+  
+  /* 伪元素  ::before   ::after */
+  
+  .title::before {
+    content: '';
+    width: 4rpx;
+    height: 28rpx;
+    background: #ccc;
+    margin-right: 26rpx;
+    display: inline-block;
+  }
+  
+  .same {
+    padding-left: 30rpx;
+    line-height: 50rpx;
+    color: #ccc;
+  }
+  
